@@ -1,7 +1,7 @@
 import datetime
 def display_current_datetime():
-    time = datetime.date.today()
-    print(f"Current date and time {time}")
+    time = datetime.datetime.today()
+    print(f"Current date and time: {time}")
 
 
 display_current_datetime()
