@@ -1,4 +1,5 @@
 import datetime
+
 def display_current_datetime():
     time = datetime.datetime.today()
     print(f"Current date and time: {time}")
