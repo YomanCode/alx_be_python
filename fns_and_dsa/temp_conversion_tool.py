@@ -8,7 +8,7 @@ def convert_to_fahrenheit(celsius):
     return celsius * CELSIUS_TO_FAHRENHEIT_FACTOR + 32
 
 convert = int(input("Enter the temperature to convert: "))
-cf = input("Is this temprature in Celsius or Fahrenheit? (C/F):")
+cf = input("Is this temperature in Celsius or Fahrenheit? (C/F):")
 if cf.upper() == 'F':
     result = convert_to_celsius(convert)
     print(f"{convert}°F is equal to {result:.2f}°C.")
