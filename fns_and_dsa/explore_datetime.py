@@ -12,7 +12,7 @@ def calculate_future_date(days):
     
     future_date = time + timedelta(days=days)
     
-    return future_date.strftime("%Y-%m-%d")
+    return future_date.strftime("%Y-%m-%d %H:%M:%S")
 
 days_input = int(input("Enter the number of days to add: "))
 
