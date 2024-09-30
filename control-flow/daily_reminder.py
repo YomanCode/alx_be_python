@@ -1,28 +1,28 @@
 Task = input("Enter your task: ")
 Priority = input("Priority (high/medium/low): ")
-TimeBound = input("Is it time-bound? (yes/no): ")
+time_bound = input("Is it time-bound? (yes/no): ")
 
 match Priority:
     case 'high':
-        if TimeBound == 'yes':
+        if time_bound == 'yes':
             print(f"Note: {Task} is a high-priority task that requires immediate attention today!")
-        elif TimeBound == 'no':
+        elif time_bound == 'no':
             print(f"Note: {Task} is a high-priority task, but it is not time-bound.")
         else:
             print("Invalid time-bound value.")
             
     case 'medium':
-        if TimeBound == 'yes':
+        if time_bound == 'yes':
             print(f"Note: {Task} is a medium-priority task. Consider doing it after higher-priority tasks today.")
-        elif TimeBound == 'no':
+        elif time_bound == 'no':
             print(f"Note: {Task} is a medium-priority task. You can do it later, not time-bound.")
         else:
             print("Invalid time-bound value.")
             
     case 'low':
-        if TimeBound == 'yes':
+        if time_bound == 'yes':
             print(f"Note: {Task} is a low-priority task, but it is time-bound.")
-        elif TimeBound == 'no':
+        elif time_bound == 'no':
             print(f"Note: {Task} is a low-priority task. Consider completing it when you have free time.")
         else:
             print("Invalid time-bound value.")
