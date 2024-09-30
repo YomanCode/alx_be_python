@@ -12,6 +12,7 @@ elif operation == "*":
 elif operation == "/":
     if num2 == 0:
         print("Can't divide by 0.")
-    print("The result is", num1 / num2)
+    else:
+        print("The result is", num1 / num2)
 else:
     print("invalid operation")
