@@ -7,7 +7,7 @@ class Test(unittest.TestCase):
 
     def test_addition(self):
         add_result = self.calc.add(10, 5)
-        self.assertEqual(add_result, 15)
+        self.assertEqual(self.calc.add(10, 5), 15)
     
     def test_subtract(self):
         sub_result = self.calc.subtract(10, 5)
