@@ -9,11 +9,11 @@ class Test(unittest.TestCase):
         add_result = self.calc.add(10, 5)
         self.assertEqual(self.calc.add(10, 5), 15)
     
-    def test_subtract(self):
+    def test_subtraction(self):
         sub_result = self.calc.subtract(10, 5)
         self.assertEqual(self.calc.subtract(10, 5), 5)
     
-    def test_multiply(self):
+    def test_multiplication(self):
         multiply_result = self.calc.multiply(10, 5)
         self.assertEqual(self.calc.multiply(10, 5), 50)
     
