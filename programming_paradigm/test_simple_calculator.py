@@ -2,24 +2,23 @@ from simple_calculator import SimpleCalculator
 import unittest
 
 class Test(unittest.TestCase):
+    def setUp(self):
+        self.calc = SimpleCalculator()
+
     def test_addition(self):
-        check_Add = SimpleCalculator()
-        add_result = check_Add.add(10, 5)
+        add_result = self.calc.add(10, 5)
         self.assertEqual(add_result, 15)
     
     def test_subtract(self):
-        check_sub = SimpleCalculator()
-        sub_result = check_sub.subtract(10, 5)
+        sub_result = self.calc.subtract(10, 5)
         self.assertEqual(sub_result, 5)
     
     def test_multiply(self):
-        check_multiply = SimpleCalculator()
-        multiply_result = check_multiply.multiply(10, 5)
+        multiply_result = self.calc.multiply(10, 5)
         self.assertEqual(multiply_result, 50)
     
     def test_division(self):
-        check_division = SimpleCalculator()
-        division_result = check_division.divide(10, 5)
+        division_result = self.calc.divide(10, 5)
         self.assertRaises(ZeroDivisionError)
         self.assertEqual(division_result, 2)
 
