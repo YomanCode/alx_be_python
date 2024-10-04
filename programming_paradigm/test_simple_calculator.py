@@ -20,6 +20,7 @@ class Test(unittest.TestCase):
     def test_division(self):
         check_division = SimpleCalculator()
         division_result = check_division.divide(10, 5)
+        self.assertRaises(ZeroDivisionError)
         self.assertEqual(division_result, 2)
 
 
