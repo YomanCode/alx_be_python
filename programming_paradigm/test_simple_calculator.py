@@ -11,16 +11,16 @@ class Test(unittest.TestCase):
     
     def test_subtract(self):
         sub_result = self.calc.subtract(10, 5)
-        self.assertEqual(sub_result, 5)
+        self.assertEqual(self.calc.subtract(10, 5), 5)
     
     def test_multiply(self):
         multiply_result = self.calc.multiply(10, 5)
-        self.assertEqual(multiply_result, 50)
+        self.assertEqual(self.calc.multiply(10, 5), 50)
     
     def test_division(self):
         division_result = self.calc.divide(10, 5)
         self.assertRaises(ZeroDivisionError)
-        self.assertEqual(division_result, 2)
+        self.assertEqual(self.calc.divide(10, 5), 2)
 
 
 if __name__ == '__main__':
