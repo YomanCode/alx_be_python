@@ -6,15 +6,12 @@ class Book:
         self._is_checked_out = False
     
     def check_out(self):
-        """Mark the book as checked out."""
         self._is_checked_out = True
     
     def return_book(self):
-        """Mark the book as available."""
         self._is_checked_out = False
     
     def is_available(self):
-        """Check if the book is available."""
         return not self._is_checked_out
 
 class Library:
@@ -22,11 +19,9 @@ class Library:
         self._books = []
 
     def add_book(self, book):
-        """Add a Book instance to the library."""
         self._books.append(book)
 
     def check_out_book(self, title):
-        """Mark the book as checked out if it is available."""
         for book in self._books:
             if book.title == title and book.is_available():
                 book.check_out()
@@ -34,7 +29,6 @@ class Library:
         return f'Sorry, "{title}" is either unavailable or not in the library.'
 
     def return_book(self, title):
-        """Mark the book as returned and available."""
         for book in self._books:
             if book.title == title:
                 if not book.is_available():
@@ -44,7 +38,6 @@ class Library:
         return f'"{title}" not found in the library.'
 
     def list_available_books(self):
-        """List all books that are currently available."""
         available_books = [book.title for book in self._books if book.is_available()]
         if available_books:
             return f'Available books: {", ".join(available_books)}'
