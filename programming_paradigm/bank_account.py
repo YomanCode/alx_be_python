@@ -17,5 +17,5 @@ class BankAccount:
         else:
             print(f"Insufficient fund")
     
-    def displace_balance(self):
+    def Current_balance(self):
         print(f"Current balance: {self.account_balance}")
