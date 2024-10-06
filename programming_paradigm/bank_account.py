@@ -15,7 +15,7 @@ class BankAccount:
             return False
 
     def display_balance(self):
-        print(f"Current Balance: {self.account_balance}")
+        print(f"Current Balance: {self.account_balance:.2f}")
 
 if __name__ == "__main__":
     initial_balance = float(sys.argv[1]) if len(sys.argv) > 1 else 0
