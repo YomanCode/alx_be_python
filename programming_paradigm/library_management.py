@@ -1,9 +1,9 @@
 # Define the Book class
 class Book:
     def __init__(self, title, author):
-        self.title = title              # Public attribute
-        self.author = author            # Public attribute
-        self._is_checked_out = False    # Private attribute to track availability
+        self.title = title
+        self.author = author
+        self._is_checked_out = False
     
     def check_out(self):
         """Mark the book as checked out."""
@@ -17,11 +17,9 @@ class Book:
         """Check if the book is available."""
         return not self._is_checked_out
 
-
-# Define the Library class
 class Library:
     def __init__(self):
-        self._books = []  # Private list to store Book instances
+        self._books = []
 
     def add_book(self, book):
         """Add a Book instance to the library."""
@@ -53,35 +51,25 @@ class Library:
         else:
             return 'No books are currently available.'
 
-# Example usage:
 if __name__ == "__main__":
-    # Create a library instance
     library = Library()
 
-    # Create some book instances
     book1 = Book("The Catcher in the Rye", "J.D. Salinger")
     book2 = Book("1984", "George Orwell")
     book3 = Book("To Kill a Mockingbird", "Harper Lee")
 
-    # Add books to the library
     library.add_book(book1)
     library.add_book(book2)
     library.add_book(book3)
 
-    # List available books
     print(library.list_available_books())
 
-    # Check out a book
     print(library.check_out_book("1984"))
 
-    # List available books after checkout
     print(library.list_available_books())
 
-    # Try to check out a book that is already checked out
     print(library.check_out_book("1984"))
 
-    # Return a book
     print(library.return_book("1984"))
 
-    # List available books after returning
     print(library.list_available_books())
