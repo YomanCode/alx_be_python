@@ -1,7 +1,7 @@
 class Book:
-    def __init__(self, title: str, author: str):
-        self.title = title
-        self.author = author
+    def __init__(self, title, author):
+        self.title = str(title)
+        self.author = str(author)
 
     def __str__(self):
         return f"Book: {self.title} by {self.author}"
